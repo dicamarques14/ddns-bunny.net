@@ -1,6 +1,7 @@
 ﻿using Bunny.API.NET.Client;
 using BunnyDDNS.Core.Configuration;
 using BunnyDDNS.Core.Utilities;
+using BunnyDDNS.Core.Utilities.IpUtils;
 using Serilog;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
@@ -36,7 +37,7 @@ public static class Program
 
         // Get current IP address
         var _ipUtils = new IpUtils(httpClient);
-        string currentIp = _ipUtils.GetCurrentIp();
+        string currentIp = _ipUtils.GetCurrentIp(IpVersion.IPv4);
         _logger.Information("Current IP: {Ip}", currentIp);
 
         // Find record in Bunny DNS
