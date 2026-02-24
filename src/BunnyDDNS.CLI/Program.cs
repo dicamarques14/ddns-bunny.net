@@ -36,7 +36,7 @@ public static class Program
 
         // Get current IP address
         var _ipUtils = new IpUtils(httpClient);
-        string currentIp = _ipUtils.GetCurrentIp(IpVersion.IPv4);
+        string currentIp = _ipUtils.GetCurrentIp();
         _logger.Information("Current IP: {Ip}", currentIp);
 
         // Find record in Bunny DNS
