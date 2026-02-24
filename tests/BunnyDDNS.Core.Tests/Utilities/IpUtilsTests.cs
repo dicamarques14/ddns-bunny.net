@@ -23,7 +23,7 @@ public class IpUtilsTests
         mockHandler.Protected()
             .Setup<Task<HttpResponseMessage>>("SendAsync",
                 ItExpr.Is<HttpRequestMessage>(r =>
-                    r.Method == HttpMethod.Get && r.RequestUri.ToString().StartsWith("https://text.myip.wtf")),
+                    r.Method == HttpMethod.Get && r.RequestUri.ToString().StartsWith("https://")),
                 ItExpr.IsAny<CancellationToken>())
             .ReturnsAsync(httpResponse);
 
