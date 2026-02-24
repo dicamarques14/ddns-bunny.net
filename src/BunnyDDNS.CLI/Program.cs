@@ -1,7 +1,6 @@
 ﻿using Bunny.API.NET.Client;
 using BunnyDDNS.Core.Configuration;
 using BunnyDDNS.Core.Utilities;
-using BunnyDDNS.Core.Utilities.IpUtils;
 using Serilog;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
